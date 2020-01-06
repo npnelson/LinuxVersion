@@ -9,7 +9,7 @@ stages:
   jobs:
   - job: BuildAndTest
     displayName: Build And Test
-    pool: Default    
+    pool: ubuntu:latest    
     steps:
     - task: UseDotNet@2
       displayName: 'Use .NET Core sdk 3.1'
