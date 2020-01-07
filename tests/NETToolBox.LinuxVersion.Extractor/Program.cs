@@ -8,7 +8,7 @@ namespace NETToolBox.LinuxVersion.Extractor
     {
         static void Main(string[] args)
         {
-            WriteOutput("alpine:latest", "/bin/cat", "/etc/os-release");
+            WriteOutput("ubuntu:latest", "/bin/cat", "/etc/os-release");
             
         }
         public static void WriteOutput(string imagename, string command, string arguments)

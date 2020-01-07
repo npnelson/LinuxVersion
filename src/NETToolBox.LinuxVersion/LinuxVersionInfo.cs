@@ -6,12 +6,12 @@ namespace NETToolBox.LinuxVersion
 {
     public class LinuxVersionInfo
     {
-        internal LinuxVersionInfo(string kernelVersion,string osRelease)
+        internal LinuxVersionInfo(string kernelVersion,string osRelease,string? osVersion)
         {           
             OS_RELEASE = osRelease;
             KernelVersion = kernelVersion;
             VersionString = string.Empty;
-            ParseOSRelease(osRelease);
+            ParseOSRelease(osRelease,osVersion);
         }
 
 #pragma warning disable CA1707 // Identifiers should not contain underscores
@@ -25,6 +25,7 @@ namespace NETToolBox.LinuxVersion
         public string? HOME_URL { get; private set; }
         public string? SUPPORT_URL { get; private set; }
         public string? BUG_REPORT_URL { get; private set; }
+        public string? VERSION { get; private set; }
         public string OS_RELEASE { get; private set; }
         public string KernelVersion { get; private set; }
         public string VersionString { get; private set; }
@@ -32,7 +33,7 @@ namespace NETToolBox.LinuxVersion
 #pragma warning restore CA1056 // Uri properties should not be strings
 #pragma warning restore CA1707 // Identifiers should not contain underscores
 
-        private void ParseOSRelease(string osRelease)
+        private void ParseOSRelease(string osRelease,string? osVersion)
         {
             var lines = osRelease.Split('\n');
             foreach (var line in lines)
@@ -41,13 +42,23 @@ namespace NETToolBox.LinuxVersion
                 else if (line.StartsWith("NAME", StringComparison.InvariantCultureIgnoreCase)) NAME = GetValue(line);
                 else if (line.StartsWith("VERSION_ID", StringComparison.InvariantCultureIgnoreCase)) VERSION_ID = GetValue(line);
                 else if (line.StartsWith("VERSION_CODENAME", StringComparison.InvariantCultureIgnoreCase)) VERSION_CODENAME = GetValue(line);
-                else if (line.StartsWith("ID", StringComparison.InvariantCultureIgnoreCase)) ID = GetValue(line);
+                else if (line.StartsWith("ID=", StringComparison.InvariantCultureIgnoreCase)) ID = GetValue(line);
                 else if (line.StartsWith("HOME_URL", StringComparison.InvariantCultureIgnoreCase)) HOME_URL = GetValue(line);
                 else if (line.StartsWith("SUPPORT_URL", StringComparison.InvariantCultureIgnoreCase)) SUPPORT_URL = GetValue(line);
                 else if (line.StartsWith("BUG_REPORT_URL", StringComparison.InvariantCultureIgnoreCase)) BUG_REPORT_URL = GetValue(line);               
             }
-
-            VersionString = $"{ID} {VERSION_ID}";
+            if (ID == "ubuntu")
+            {
+                VersionString = $"{PRETTY_NAME}";
+            }
+            else if (osVersion == null)
+            {
+                VersionString = $"{ID} {VERSION_ID}";
+            }
+            else
+            {
+                VersionString = $"{ID} {osVersion.Trim()}";
+            }
         }
 
         private static string GetValue(string line)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
-[assembly:InternalsVisibleTo("NETToolBox.LinuxVersion.Tests")]
+[assembly: InternalsVisibleTo("NETToolBox.LinuxVersion.Tests")]
 namespace NETToolBox.LinuxVersion
 {
     public static class GetLinuxVersion
@@ -13,7 +13,12 @@ namespace NETToolBox.LinuxVersion
             if (!RuntimeInformation.IsOSPlatform(OSPlatform.Linux)) throw new InvalidOperationException("Do not call GetLinuxVersionInfo when not running on Linux");
             var kernel = RuntimeInformation.OSDescription;
             var osReleaseOutput = GetCommandOutput("/bin/cat", "/etc/os-release");
-            var retval = new LinuxVersionInfo(kernel, osReleaseOutput);
+            string? osVersion=null;
+            if (osReleaseOutput.Contains("debian", StringComparison.OrdinalIgnoreCase))
+            {
+                osVersion = GetCommandOutput("/bin/cat", "/etc/debian_version");
+            }
+            var retval = new LinuxVersionInfo(kernel, osReleaseOutput, osVersion);
             return retval;
         }
 
@@ -21,7 +26,7 @@ namespace NETToolBox.LinuxVersion
         {
             string retval;
             System.Diagnostics.ProcessStartInfo procStartInfo;
-            procStartInfo = new System.Diagnostics.ProcessStartInfo(command,arguments);
+            procStartInfo = new System.Diagnostics.ProcessStartInfo(command, arguments);
             procStartInfo.RedirectStandardOutput = true;
             procStartInfo.RedirectStandardError = true;
             procStartInfo.UseShellExecute = false;
