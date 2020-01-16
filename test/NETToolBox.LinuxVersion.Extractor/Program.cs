@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace NETToolBox.LinuxVersion.Extractor
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {

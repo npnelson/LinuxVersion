@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace NETToolBox.LinuxVersion
 {
@@ -43,6 +41,7 @@ namespace NETToolBox.LinuxVersion
                 else if (line.StartsWith("VERSION_ID", StringComparison.InvariantCultureIgnoreCase)) VERSION_ID = GetValue(line);
                 else if (line.StartsWith("VERSION_CODENAME", StringComparison.InvariantCultureIgnoreCase)) VERSION_CODENAME = GetValue(line);
                 else if (line.StartsWith("ID=", StringComparison.InvariantCultureIgnoreCase)) ID = GetValue(line);
+                else if (line.StartsWith("VERSION=", StringComparison.InvariantCultureIgnoreCase)) VERSION = GetValue(line);
                 else if (line.StartsWith("HOME_URL", StringComparison.InvariantCultureIgnoreCase)) HOME_URL = GetValue(line);
                 else if (line.StartsWith("SUPPORT_URL", StringComparison.InvariantCultureIgnoreCase)) SUPPORT_URL = GetValue(line);
                 else if (line.StartsWith("BUG_REPORT_URL", StringComparison.InvariantCultureIgnoreCase)) BUG_REPORT_URL = GetValue(line);               
