@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29521.150
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F458DB28-9D73-491C-A8DF-281AC541750D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NETToolBox.LinuxVersion", "src\NETToolBox.LinuxVersion\NETToolBox.LinuxVersion.csproj", "{5FAECD1D-3604-4A94-9C33-7E76D0BDA265}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NETToolBox.LinuxVersion", "src\NETToolBox.LinuxVersion\NETToolBox.LinuxVersion.csproj", "{5C94DB70-E5E1-4DDD-AC1E-6E8F524B0C37}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7EFD45B5-5A38-417F-BB11-5B6C9C79371F}"
 	ProjectSection(SolutionItems) = preProject
@@ -15,13 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FF54A927-7182-4D8F-8BD4-9F207FAA0051}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{FF54A927-7182-4D8F-8BD4-9F207FAA0051}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NETToolBox.LinuxVersion.Tests", "tests\NETToolBox.LinuxVersion.Tests\NETToolBox.LinuxVersion.Tests.csproj", "{5A6634AC-9CAB-4A21-8DBB-A78C394B7F1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NETToolBox.LinuxVersion.Extractor", "test\NETToolBox.LinuxVersion.Extractor\NETToolBox.LinuxVersion.Extractor.csproj", "{3F82FF57-6DFB-46C0-8BBA-3283EAF82DD0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NETToolBox.LinuxVersion.Extractor", "tests\NETToolBox.LinuxVersion.Extractor\NETToolBox.LinuxVersion.Extractor.csproj", "{EF732BF2-7118-46A4-8726-6EDF77985B4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NETToolBox.LinuxVersion.TestHarness", "test\NETToolBox.LinuxVersion.TestHarness\NETToolBox.LinuxVersion.TestHarness.csproj", "{0A41821C-5E1F-4C0E-AAB2-439315309009}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NETToolBox.LinuxVersion.TestHarness", "tests\NETToolBox.LinuxVersion.TestHarness\NETToolBox.LinuxVersion.TestHarness.csproj", "{EBD15A5E-5879-4E63-991B-39496C934F4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NETToolBox.LinuxVersion.Tests", "test\NETToolBox.LinuxVersion.Tests\NETToolBox.LinuxVersion.Tests.csproj", "{78A6B298-576F-47D0-AF76-43B8820C2987}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,31 +29,31 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5FAECD1D-3604-4A94-9C33-7E76D0BDA265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5FAECD1D-3604-4A94-9C33-7E76D0BDA265}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5FAECD1D-3604-4A94-9C33-7E76D0BDA265}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5FAECD1D-3604-4A94-9C33-7E76D0BDA265}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5A6634AC-9CAB-4A21-8DBB-A78C394B7F1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A6634AC-9CAB-4A21-8DBB-A78C394B7F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A6634AC-9CAB-4A21-8DBB-A78C394B7F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A6634AC-9CAB-4A21-8DBB-A78C394B7F1B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EF732BF2-7118-46A4-8726-6EDF77985B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF732BF2-7118-46A4-8726-6EDF77985B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF732BF2-7118-46A4-8726-6EDF77985B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF732BF2-7118-46A4-8726-6EDF77985B4B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EBD15A5E-5879-4E63-991B-39496C934F4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EBD15A5E-5879-4E63-991B-39496C934F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EBD15A5E-5879-4E63-991B-39496C934F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EBD15A5E-5879-4E63-991B-39496C934F4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C94DB70-E5E1-4DDD-AC1E-6E8F524B0C37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C94DB70-E5E1-4DDD-AC1E-6E8F524B0C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C94DB70-E5E1-4DDD-AC1E-6E8F524B0C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C94DB70-E5E1-4DDD-AC1E-6E8F524B0C37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F82FF57-6DFB-46C0-8BBA-3283EAF82DD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F82FF57-6DFB-46C0-8BBA-3283EAF82DD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F82FF57-6DFB-46C0-8BBA-3283EAF82DD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F82FF57-6DFB-46C0-8BBA-3283EAF82DD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A41821C-5E1F-4C0E-AAB2-439315309009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A41821C-5E1F-4C0E-AAB2-439315309009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A41821C-5E1F-4C0E-AAB2-439315309009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A41821C-5E1F-4C0E-AAB2-439315309009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78A6B298-576F-47D0-AF76-43B8820C2987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78A6B298-576F-47D0-AF76-43B8820C2987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78A6B298-576F-47D0-AF76-43B8820C2987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78A6B298-576F-47D0-AF76-43B8820C2987}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{5FAECD1D-3604-4A94-9C33-7E76D0BDA265} = {F458DB28-9D73-491C-A8DF-281AC541750D}
-		{5A6634AC-9CAB-4A21-8DBB-A78C394B7F1B} = {FF54A927-7182-4D8F-8BD4-9F207FAA0051}
-		{EF732BF2-7118-46A4-8726-6EDF77985B4B} = {FF54A927-7182-4D8F-8BD4-9F207FAA0051}
-		{EBD15A5E-5879-4E63-991B-39496C934F4E} = {FF54A927-7182-4D8F-8BD4-9F207FAA0051}
+		{5C94DB70-E5E1-4DDD-AC1E-6E8F524B0C37} = {F458DB28-9D73-491C-A8DF-281AC541750D}
+		{3F82FF57-6DFB-46C0-8BBA-3283EAF82DD0} = {FF54A927-7182-4D8F-8BD4-9F207FAA0051}
+		{0A41821C-5E1F-4C0E-AAB2-439315309009} = {FF54A927-7182-4D8F-8BD4-9F207FAA0051}
+		{78A6B298-576F-47D0-AF76-43B8820C2987} = {FF54A927-7182-4D8F-8BD4-9F207FAA0051}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B6C5E7C-9C00-44FD-BC9A-C1CDEBE243DA}
