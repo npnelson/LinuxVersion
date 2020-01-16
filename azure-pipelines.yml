@@ -9,7 +9,7 @@ stages:
   - job: BuildAndTest
     displayName: Build And Test
     pool:
-      vmImage: 'ubuntu-18.04'
+      vmImage: 'ubuntu-latest'
     steps:
     - task: UseDotNet@2
       displayName: 'Use .NET Core sdk 3.1'
