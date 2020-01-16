@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29521.150
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F458DB28-9D73-491C-A8DF-281AC541750D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NETToolBox.LinuxVersion", "src\NETToolBox.LinuxVersion\NETToolBox.LinuxVersion.csproj", "{5C94DB70-E5E1-4DDD-AC1E-6E8F524B0C37}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7EFD45B5-5A38-417F-BB11-5B6C9C79371F}"
+	ProjectSection(SolutionItems) = preProject
+		azure-pipelines.yml = azure-pipelines.yml
+		.config\dotnet-tools.json = .config\dotnet-tools.json
+		GitVersion.yml = GitVersion.yml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{FF54A927-7182-4D8F-8BD4-9F207FAA0051}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NETToolBox.LinuxVersion.Extractor", "test\NETToolBox.LinuxVersion.Extractor\NETToolBox.LinuxVersion.Extractor.csproj", "{3F82FF57-6DFB-46C0-8BBA-3283EAF82DD0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NETToolBox.LinuxVersion.TestHarness", "test\NETToolBox.LinuxVersion.TestHarness\NETToolBox.LinuxVersion.TestHarness.csproj", "{0A41821C-5E1F-4C0E-AAB2-439315309009}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NETToolBox.LinuxVersion.Tests", "test\NETToolBox.LinuxVersion.Tests\NETToolBox.LinuxVersion.Tests.csproj", "{78A6B298-576F-47D0-AF76-43B8820C2987}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C94DB70-E5E1-4DDD-AC1E-6E8F524B0C37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C94DB70-E5E1-4DDD-AC1E-6E8F524B0C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C94DB70-E5E1-4DDD-AC1E-6E8F524B0C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C94DB70-E5E1-4DDD-AC1E-6E8F524B0C37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F82FF57-6DFB-46C0-8BBA-3283EAF82DD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F82FF57-6DFB-46C0-8BBA-3283EAF82DD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F82FF57-6DFB-46C0-8BBA-3283EAF82DD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F82FF57-6DFB-46C0-8BBA-3283EAF82DD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A41821C-5E1F-4C0E-AAB2-439315309009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A41821C-5E1F-4C0E-AAB2-439315309009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A41821C-5E1F-4C0E-AAB2-439315309009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A41821C-5E1F-4C0E-AAB2-439315309009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78A6B298-576F-47D0-AF76-43B8820C2987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78A6B298-576F-47D0-AF76-43B8820C2987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78A6B298-576F-47D0-AF76-43B8820C2987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78A6B298-576F-47D0-AF76-43B8820C2987}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5C94DB70-E5E1-4DDD-AC1E-6E8F524B0C37} = {F458DB28-9D73-491C-A8DF-281AC541750D}
+		{3F82FF57-6DFB-46C0-8BBA-3283EAF82DD0} = {FF54A927-7182-4D8F-8BD4-9F207FAA0051}
+		{0A41821C-5E1F-4C0E-AAB2-439315309009} = {FF54A927-7182-4D8F-8BD4-9F207FAA0051}
+		{78A6B298-576F-47D0-AF76-43B8820C2987} = {FF54A927-7182-4D8F-8BD4-9F207FAA0051}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B6C5E7C-9C00-44FD-BC9A-C1CDEBE243DA}
+	EndGlobalSection
+EndGlobal

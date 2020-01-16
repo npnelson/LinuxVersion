@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "NETToolBox.LinuxVersion.TestHarness": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

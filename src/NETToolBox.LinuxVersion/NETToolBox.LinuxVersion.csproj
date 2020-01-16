@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ProjectGuid>5c94db70-e5e1-4ddd-ac1e-6e8f524b0c37</ProjectGuid>
+    <RepositoryUrl>https://github.com/npnelson/LinuxVersion</RepositoryUrl>
+    <Description>Get more detailed information regarding Linux version than .NET provides natively</Description>
+    <Authors>npnelson</Authors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>  
+</Project>
